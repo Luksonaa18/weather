@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(images/bg-weather.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.6s ease-in-out;
+}
+header{
+    height: 90px;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.search-bar{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+nav span{
+    font-family: "Ubuntu", serif; 
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.06px;
+    text-align: left;
+    color: #FFFFFFB2;
+}
+.inner{
+    display: flex;
+    flex-direction: row;
+    gap: 0.9rem;
+}
+.weather{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    gap: 1rem;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    gap: 9px;
+}
+.weather h1{
+    font-family: "Ubuntu", serif; 
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 75px;
+    letter-spacing: -0.08em;
+    text-align: left;
+    color: white;
+}
+.under h2{
+    font-family: "Roboto";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 35.16px;
+    text-align: left;
+    color: white;
+}
+.under p{
+    font-family: "Roboto";
+font-size: 10px;
+font-weight: 400;
+line-height: 11.72px;
+text-align: left;
+color: white;
+}
+.fa-solid{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    transition: 0.6s ease-in-out;
+}
+.afteer.shown:active {
+    content: "";
+    position: absolute;
+    margin-top: -95%;
+    right: 0;
+    width: 0;
+    height: 0;
+    transform: translate(0, 10%);
+    transition: 0.6s ease-in-out;
+  }
+.afteer{
+    display: none;
+    transition: 0.6s ease-in-out;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    justify-content: end;
+    transition: 0.5s ease-in-out;
+}
+.afteer.shown{
+    display: flex;
+    width: 100%;
+    height: 470px;
+    border-top: 5px solid #FFFFFF24;
+    background: #FFFFFF0A;
+    backdrop-filter: blur(19px);
+    transition: 0.7s ease-in-out;
+    justify-content: center;
+   
+}
+.afteer.shown::after{
+    transition: 0.6s ease-in-out;
+}
+.fa-solid.rotata{
+   transform: rotate(180deg);
+   transition: 0.6s ease-in-out;
+}
+.all{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+    transition: 0.6s ease-in-out;
+}
+.all h1{
+    font-family:"Roboto";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.41px;
+    text-align: center;
+    color: white;
+}
+.info-weather{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+}
+.temp-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 6rem;
+    
+}
+.celsius{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.temps{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: self-start;
+}
+.text span{
+    color: white;
+}
+.temp-info span{
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    text-align: left;
+    color: white;
+}
+.celsius p{
+    font-family: "Roboto";
+font-size: 14px;
+font-weight: 400;
+line-height: 16.41px;
+text-align: right;
+color: white;
+}
+i{
+    display: flex;
+    flex-direction: row;
+   align-items: center;
+   justify-content: center;
+}
+.forecast{
+    display: none;
+}
+@media (min-width:540px){
+body{
+    background-image: url(images/bg-weather\ \(1\).png);
+    display: flex;
+    flex-direction: column;
+}
+.forecast{
+    display: none;
+}
+}
+@media(min-width:1024px){
+    body{
+        background-image: url(images/bg-weather\ \(2\).png);
+        background-size: cover;
+        overflow-y: hidden;
+    }
+    main{
+        display: flex;
+        flex-direction: row;
+    }
+    .afteer.shown{
+        width: 30%;
+        height: 870px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .forecast{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+    .snow{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    .search-bar {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        position: relative;
+        z-index: 1;
+    }
+    .insnow p{
+        color: white;
+        font-family: "Roboto";
+        font-size: 12px;
+
+    }
+    .insnow span{
+        color: white;
+    }
+    h2{
+        color: white;
+    }
+    .fa-solid.rotata {
+        transform: rotate(90deg);
+        transition: 0.6s ease-in-out;
+        margin-right: 7px;
+    }
+    .fa-solid{
+        transform: rotate(-90deg);
+        margin-right: 4px;
+    }
+    .weather{
+        position: relative;
+        top: 500px;
+    }
+    .temps{
+        gap: 4rem;
+    }
+  
+}
